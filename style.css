@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 120px 20px 20px; /* ← 上に80pxの余白を追加して、ヘッダーに隠れないようにする */
+    background: #002060;
+    color: #e6e6e6;
+}
+
+/*ヘッダー*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #002060;
+    color: #e6e6e6;
+    padding: 1em;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: center;            /* 上下中央揃え */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    margin-left: auto; /* ← これで右端へ移動 */
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0.025em;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.header nav a {
+    color: #002060;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px;      /* ロゴ画像の高さを調整 */
+    width: auto;       /* 幅は自動で比率を保つ */
+}
+
+/*現在時刻*/
+#clock {
+    font-size: 2em;
+    font-family: sans-serif;
+    white-space: nowrap;
+}
+
+/* 値の色分け */
+#soil2n {
+    color: #4bc0c0;
+    font-size: 20px;
+}
+
+#soil5n {
+    color: #ff9f40;
+    font-size: 20px;
+}
+
+#soil8n {
+    color: #9966ff;
+    font-size: 20px;
+}
+
+#soil10e {
+    color: #ff6384;
+    font-size: 20px;
+}
+
+#soil10w {
+    color: #36a2eb;
+    font-size: 20px;
+}
+
+#soil-main-avg {
+    color: #E67E22;
+    font-size: 20px;
+}
+
+#soil-10-avg {
+    color: #27AE60;
+    font-size: 20px;
+}
+
+#soil-main-avg-yesterday {
+    color: #8E44AD;
+    font-size: 20px;
+}
+
+#soil-10-avg-yesterday {
+    color: #2C3E50;
+    font-size: 20px;
+}
+
+/*グラフ*/
+.chart-block {
+  background: #002060;
+  /* background: #e6e6e6; */
+  position: absolute; /* or fixed */
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(230, 230, 230, 0.1);
+  text-align: center;
+  height: 900px;       /* ← 高さを拡大 */
+  width: 1600px;   /* ← フルHDでも見やすいように横幅を制限 */
+  top: 125px; /* マイナスで上に移動 */
+  left: 250px; /* 左から200px */
+  /* right: -5px; */
+}
+
+.chart-block canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
