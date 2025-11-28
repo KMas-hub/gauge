@@ -61,6 +61,23 @@ body {
     width: auto;       /* 幅は自動で比率を保つ */
 }
 
+.external-button {
+    padding: 8px 16px;
+    margin: 24px;
+    margin-top: 16px;
+    font-size: 24px;
+    background-color: #002060; /* 好きな色に変更可能 */
+    color: #e6e6e6;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.external-button:hover {
+    background-color: #e6e6e6;
+    color: #002060;
+}
+
 /*現在時刻*/
 #clock {
     font-size: 2em;
